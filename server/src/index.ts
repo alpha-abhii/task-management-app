@@ -15,6 +15,9 @@ app.get('/',(req,res)=>{
     res.send('Task Manager API');
 })
 
+import taskRoutes from './routes/taskRoutes';
+app.use('/api',taskRoutes)
+
 app.listen(PORT,()=>{
     console.log(`Server running on port ${PORT}`);
 })
